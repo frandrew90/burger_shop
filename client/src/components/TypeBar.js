@@ -1,5 +1,5 @@
-import { observer } from "mobx-react-lite";
 import React, { useContext } from "react";
+import { observer } from "mobx-react-lite";
 import { Context } from "../index";
 import { ListGroup } from "react-bootstrap";
 
@@ -14,10 +14,10 @@ const TypeBar = observer(() => {
           <ListGroup.Item
             style={{ cursor: "pointer" }}
             key={type.id}
-            // active={type.id === food.selectedType.id}
+            // active={type.id === food1.selectedType.id}
             onClick={() => {
               food.setSelectedType(type);
-              // console.log(food.types);
+              console.log(food.selectedType);
             }}
           >
             {type.name}
